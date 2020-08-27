@@ -1,18 +1,15 @@
-import React, { useState } from 'react';
-import CounterInput from './CounterInput'
+import React from 'react'
 import CounterOutput from './CounterOutput'
-import './App.css';
+import CounterInput from './CounterInput'
 
 function App() {
-  const [counter, setCounter] = useState(0)
-
-  return (
-    <div className="App">
-      <CounterOutput counter={counter} />
-      <br />
-      <CounterInput setCounter={setCounter} counter={counter} />
-    </div>
-  );
+    return (
+        <div>
+            <CounterOutput />
+            <br />
+            <CounterInput />
+        </div>
+    )
 }
 
-export default App;
+export default App

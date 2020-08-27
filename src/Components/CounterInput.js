@@ -1,13 +1,17 @@
 import React from 'react'
+import { useDispatch } from 'react-redux';
 
+export default function CounterInput() {
+    const dispatch = useDispatch();
 
-function CounterInput(props) {
     return (
-        <>
-         <button onClick={() => props.setCounter(props.counter + 1)}>+</button>   
-         <button onClick={() => props.setCounter(props.counter - 1)}>-</button>   
-        </>
+        <div>
+            <button onClick={() => dispatch({
+                type: 'INCREMENT'
+            })}>+</button>
+            <button onClick={() => dispatch({
+                type: 'DECREMENT'
+            })}>-</button>
+        </div>
     )
 }
-
-export default CounterInput
